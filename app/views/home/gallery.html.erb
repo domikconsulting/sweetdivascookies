@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="We have a crazy passion for baking and decorating sugar cookies! You bring us a theme, and our creativity will bring it to life in cookies!!! Lori &amp Arlene">
+      <meta name="author" content="Artem Nikitin | Domik Consulting">
+      <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+  <!-- ============== NAVBAR ============== -->
+
+    <nav class="navbar navbar-fixed-top navbar-custom">
+      <div class="hidden-xs">
+        <img id="lglogo" src="/images/logo2.png" alt="Sweet Divas Cookies">
+      </div>
+      <div class="visible-xs">
+        <img id="smlogo" src="/images/logo1.png" alt="Sweet Divas Cookies">
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand hidden" href="#">
+            Sweet Divas Cookies
+          </a>
+          <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#corporate">Corporate</a></li>
+            <li><a href="#themes">Events &amp Themes</a></li>
+            <li><a href="#holidays">Holidays &amp Seasons</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#dogtreats">Dog Treats</a></li>
+            <li><a href="/#gallery">&lt Back</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>       
+
+    
+
+    <!-- ============== CORPORATE ============== -->
+    <a name="corporate"></a>
+
+
+    <div class="container top-buffer">
+      <div class="wow shake" data-wow-delay="1s"><h1>Corporate</h1></div>
+      <div id ="corporate">
+        <div id="links">
+          <% @corporate.each_with_index do |carimg, index| %>
+            <% if index==0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Corporate/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Corporate/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+            <% if index != 0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Corporate/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Corporate/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+ 
+
+    <!-- ============== EVENTS & THEMES ============== -->
+    <a name="themes"></a>
+
+
+    <div class="container top-buffer">
+      <div class="wow shake" data-wow-delay="2s"><h1>Events &amp Themes</h1></div>
+      <div id ="themes">
+        <div id="links">
+          <% @themes.each_with_index do |carimg, index| %>
+            <% if index==0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Events_and_Themes/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Events_and_Themes/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+            <% if index != 0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Events_and_Themes/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Events_and_Themes/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============== HOLIDAYS & SEASONS ============== -->
+    <a name="holidays"></a>
+
+
+    <div class="container top-buffer">
+      <div class="wow shake" data-wow-delay="1s"><h1>Holidays &amp Seasons</h1></div>
+      <div id ="holidays">
+        <div id="links">
+          <% @holidays.each_with_index do |carimg, index| %>
+            <% if index==0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div> 
+            <% end %>
+            <% if index != 0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============== SPORTS ============== -->
+    <a name="sports"></a>
+
+
+    <div class="container top-buffer">
+      <div class="wow shake" data-wow-delay="1s"><h1>Sports</h1></div>
+      <div id ="sports">
+        <div id="links">
+          <% @sports.each_with_index do |carimg, index| %>
+            <% if index==0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Sports/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Sports/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+            <% if index != 0 %>
+              <div class="col-sm-3">  
+                <a href="/images/Gallery/Sports/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Sports/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============== DOG TREATS ============== -->
+    <a name="dogtreats"></a>
+
+
+    <div class="container top-buffer">
+      <div class="wow shake" data-wow-delay="1s"><h1>Dog Treats</h1></div>
+      <div id ="dogtreats">
+        <div id="links">
+          <% @dogtreats.each_with_index do |carimg, index| %>
+            <% if index==0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Dog_Treats/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Dog_Treats/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+            <% if index != 0 %>
+              <div class="col-sm-3">
+                <a href="/images/Gallery/Dog_Treats/<%= carimg %>" data-gallery class="thumbnail">
+                  <img src="/images/Gallery/Dog_Treats/<%= carimg %>" alt="<%= carimg %>">
+                </a>
+              </div>
+            <% end %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+      <div id="blueimp-gallery" class="blueimp-gallery">
+          <!-- The container for the modal slides -->
+          <div class="slides"></div>
+          <!-- Controls for the borderless lightbox -->
+          <h3 class="title"></h3>
+          <a class="prev">‹</a>
+          <a class="next">›</a>
+          <a class="close">×</a>
+          <a class="play-pause"></a>
+          <ol class="indicator"></ol>
+          <!-- The modal dialog, which will be used to wrap the lightbox content -->
+          <div class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"></h4>
+                      </div>
+                      <div class="modal-body next"></div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default pull-left prev">
+                              <i class="glyphicon glyphicon-chevron-left"></i>
+                              Previous
+                          </button>
+                          <button type="button" class="btn btn-primary next">
+                              Next
+                              <i class="glyphicon glyphicon-chevron-right"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    <!-- ============== FOOTER ============== -->
+      <footer class="top-buffer">
+        <div class="container">
+          <p>&copy; Copyright 2015 - Sweet Divas Cookies. All rights reserved.</p>
+        </div>
+      </footer>
+
+  </body>
+</html>
