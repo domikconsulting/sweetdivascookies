@@ -18,7 +18,10 @@
     <nav class="navbar navbar-fixed-top navbar-custom">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand hidden-xs" href="#">
+          <a id="lglogo" class="navbar-brand hidden-xs" href="#">
+            <img src="/images/logo2.png" alt="Sweet Divas Cookies">
+          </a>
+          <a id="smlogo" class="navbar-brand visible-xs" href="#">
             <img src="/images/logo1.png" alt="Sweet Divas Cookies">
           </a>
           <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -114,23 +117,54 @@
   </div>
 </div>
 
-
-
 <!-- ============== TESTIMONIALS ============== -->
 <a name="testimonials"></a>
 
-
 <div class="container top-buffer">
   <h1>Feedback from the Cookie Monster</h1>
-  <div id ="testimonials">
-    <blockquote>
-      <p>I ordered cookies for my husband's birthday and a work event. The designs are so creative and they taste even better!</p>
-      <p><small>Rochelle</small></p>
-    </blockquote>
-  </div>
+  
 </div>
 
-
+<div class="container">
+  <div class='row'>
+    <div>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+            <div id ="testimonials" class="row">
+              <blockquote class="col-sm-offset-1 col-sm-10">
+                <p>I ordered cookies for my husband's birthday and a work event. The designs are so creative and they taste even better!</p>
+                <p><small>Rochelle</small></p>
+              </blockquote>
+            </div>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <div id ="testimonials" class="row">
+              <blockquote class="col-sm-offset-1 col-sm-10">
+                <p>I met Lori when we worked with each other at a scrapbook store. Being friends with her on Facebook and seeing her posts of the cookies that her and her friend made were so 
+                professional and cute. I am so glad that they have now created a company for their delicious cookies.  I purchased cookies for a scrapbook weekend to share. They turned out 
+                so cute and in the colors I love. They were so good and everyone loved them, which I had to purchase more for Christmas and Valentine’s Day as well. I am so grateful that Lori 
+                lives close enough that it is so easy for me to order from her and we can meet. I have another scrapbook weekend coming up, I will have to order more. Thanks Lori.</p>
+                <p><small>Karen</small></p>
+              </blockquote>
+            </div>
+          </div>
+          <!-- Quote 3 -->
+          
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev -->
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+      </div>                          
+    </div>
+  </div>
+</div>
 
 <!-- ============== PRICING ============== -->
 <a name="pricing"></a>
