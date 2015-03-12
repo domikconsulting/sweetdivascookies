@@ -36,6 +36,8 @@ Rails.application.configure do
   config.assets.digest = true
   config.assets.enabled = true
 
+  
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.

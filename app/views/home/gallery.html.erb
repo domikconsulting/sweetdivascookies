@@ -18,11 +18,11 @@
     <nav class="navbar navbar-fixed-top navbar-custom">
       <div class="container">
         <div class="navbar-header">
-          <a id="lglogo" class="navbar-brand hidden-xs" href="/#">
-            <img src="/images/logo.png" alt="Sweet Divas Cookies">
+          <a class="navbar-brand hidden-xs" href="#">
+            <%= image_tag 'logo.png', :id => 'lglogo'%>
           </a>
-          <a id="smlogo" class="navbar-brand visible-xs" href="/#">
-            <img src="/images/logo.png" alt="Sweet Divas Cookies" style="width: 120px; height: 93;">
+          <a class="navbar-brand visible-xs" href="#">
+            <%= image_tag 'logo.png', :id => 'smlogo'%>
           </a>
           <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class = "icon-bar"></span>
@@ -56,15 +56,15 @@
           <% @corporate.each_with_index do |carimg, index| %>
             <% if index==0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Corporate/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Corporate/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Corporate/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Corporate/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Corporate/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Corporate/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Corporate/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Corporate/#{carimg}") %>
                 </a>
               </div>
             <% end %>
@@ -85,17 +85,18 @@
           <% @themes.each_with_index do |carimg, index| %>
             <% if index==0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Events_and_Themes/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Events_and_Themes/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Events_and_Themes/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Events_and_Themes/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Events_and_Themes/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Events_and_Themes/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Events_and_Themes/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Events_and_Themes/#{carimg}") %>
                 </a>
               </div>
+              
             <% end %>
           <% end -%>
         </div>
@@ -113,15 +114,15 @@
           <% @holidays.each_with_index do |carimg, index| %>
             <% if index==0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Holidays_and_Seasons/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Holidays_and_Seasons/#{carimg}") %>
                 </a>
               </div> 
             <% end %>
             <% if index != 0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Holidays_and_Seasons/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Holidays_and_Seasons/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Holidays_and_Seasons/#{carimg}") %>
                 </a>
               </div>
             <% end %>
@@ -141,15 +142,15 @@
           <% @sports.each_with_index do |carimg, index| %>
             <% if index==0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Sports/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Sports/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Sports/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Sports/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
               <div class="col-sm-3">  
-                <a href="/images/Gallery/Sports/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Sports/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Sports/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Sports/#{carimg}") %>
                 </a>
               </div>
             <% end %>
@@ -169,15 +170,15 @@
           <% @dogtreats.each_with_index do |carimg, index| %>
             <% if index==0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Dog_Treats/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Dog_Treats/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Dog_Treats/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Dog_Treats/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
               <div class="col-sm-3">
-                <a href="/images/Gallery/Dog_Treats/<%= carimg %>" data-gallery class="thumbnail">
-                  <img src="/images/Gallery/Dog_Treats/<%= carimg %>" alt="<%= carimg %>">
+                <a href="/assets/Gallery/Dog_Treats/<%= carimg %>" data-gallery class="thumbnail">
+                  <%= image_tag("Gallery/Dog_Treats/#{carimg}") %>
                 </a>
               </div>
             <% end %>

@@ -2,26 +2,26 @@
 --- Body
 ============================ */
 body h1 {
-	margin-bottom: 65px;
-	text-align: center;
-	font-family: 'Parisienne', cursive;
-	font-size: 65px;
-	color: #ec108d; //hotpink
+  margin-bottom: 65px;
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+  font-size: 65px;
+  color: #ec108d; //hotpink
 }
 .lead {
-	font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive;
 }
 
 body h2 {
-	font-family: 'Comfortaa', cursive;
-	text-transform: uppercase;
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
 
 }
 
 body h3 {
-	font-family: 'Comfortaa', cursive;
-	text-transform: uppercase;
-	height: 42px;
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  height: 42px;
 }
 
 
@@ -30,31 +30,31 @@ body h3 {
 ============================ */
 
 .navbar-brand {
-	font-family: 'Parisienne', cursive;
-	font-size: 30px;
+  font-family: 'Parisienne', cursive;
+  font-size: 30px;
 }
 
 .navbar-custom {
-	background-color: #060709;
-	color: #ffffff;
-	border-radius: 0;
+  background-color: #060709;
+  color: #ffffff;
+  border-radius: 0;
 }
 
 .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-	color: #ec108d;
-	background-color: transparent;
+  color: #ec108d;
+  background-color: transparent;
 }
 
 .navbar-custom .navbar-nav > li > a {
-	font-family: 'Comfortaa', cursive;
-	font-weight: 400;
-	color: #ec108d; //hotpink
-	font-size: 18px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  color: #ec108d; //hotpink
+  font-size: 18px;
 }
 
 .navbar-toggle .icon-bar {
-	color: #ec108d; //hotpink
-	background-color: #ec108d; //hotpink
+  color: #ec108d; //hotpink
+  background-color: #ec108d; //hotpink
 }
 
 /* ===========================
@@ -64,42 +64,64 @@ body h3 {
 
 
 .intro {
-	width: 100%;
-	min-height: 350px;
-	position:relative;
-	background-image: image-url("bg.jpg");
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+  width: 100%;
+  min-height: 350px;
+  position:relative;
+  background-image: image-url("bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #intro.intro {
-	padding:50% 0 0 0;
+  padding:50% 0 0 0;
 }
 .intro .slogan {
-	text-align: center;
+  text-align: center;
 
 }
 
-.intro .slogan {
-	width: 100%;
-	height: 50%;
-	margin: auto;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-	color: #FFF;
-	font-size: 75px;
-	line-height: 60px;
-	font-weight: 700;
-	font-family: 'Parisienne', cursive;
-	text-shadow: -1px 0 1px #000;
+.slogan {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: #ec108d;
+  line-height: 60px;
+  font-weight: 700;
+  font-family: 'Parisienne', cursive;
+  text-shadow: -1px 0 2px #000;
 }
+
+@media(max-width:767px){
+  .slogan {
+    font-size:40px;
+  }
+}
+@media(min-width:768px){
+  .slogan {
+    font-size:40px;
+  }
+}
+@media(min-width:992px){
+  .slogan {
+    font-size:65px;
+  }
+}
+@media(min-width:1200px){
+  .slogan {
+    font-size:75px;
+  }
+}
+
+
 
 
 
 #footer {
-	margin-bottom: 150px;
+  margin-bottom: 150px;
 }
 
 /* ===========================
@@ -107,18 +129,18 @@ body h3 {
 ============================ */
 
 #gallery {
-	text-align: center;
-	text-decoration: none;
+  text-align: center;
+  text-decoration: none;
 }
 
 #gallery a {
-	color: inherit;
-	text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .gut {
-	margin-right: 12.5px;
-	margin-left: 12.5px;
+  margin-right: 12.5px;
+  margin-left: 12.5px;
 }
 
 /* ===========================
@@ -258,22 +280,22 @@ blockquote small{
 
 
 .top-buffer {
-	margin-top: 150px;
+  margin-top: 150px;
 }
 
 .bottom-buffer {
-	margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 #links img {
-	 // padding: 15px;
+   // padding: 15px;
 }
 
 
 // =============================
 
 .thumbnail {
-	position:relative;
+  position:relative;
     width: 200px;
     height: 200px;
     overflow: hidden;
@@ -281,42 +303,46 @@ blockquote small{
 }
 
 .thumbnail img {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	// height: 100%;
-	width: auto;
-	-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  // height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 }
 
 #about {
-	margin-bottom: 50px;
-	margin-top: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 
 #lglogo {
-	
+  
 }
 
 #smlogo {
-	display: block;
-	position: absolute;
-	left: 25%;
+  display: block;
+  position: absolute;
+  left: 26%;
+  width: 120px; 
+  height: 93px;
 }
 
 
 .avatar {
-	display: block;
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
+  height: 170px;
 }
 
 .btn {
-	border-radius: 0;
+  border-radius: 0;
     text-transform: uppercase;
     font-family: Montserrat,sans-serif;
     font-weight: 400;

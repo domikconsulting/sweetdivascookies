@@ -18,11 +18,11 @@
     <nav class="navbar navbar-fixed-top navbar-custom">
       <div class="container">
         <div class="navbar-header">
-          <a id="lglogo" class="navbar-brand hidden-xs" href="#">
-            <img src="/images/logo.png" alt="Sweet Divas Cookies">
+          <a class="navbar-brand hidden-xs" href="#">
+            <%= image_tag 'logo.png', :id => 'lglogo'%>
           </a>
-          <a id="smlogo" class="navbar-brand visible-xs" href="#">
-            <img src="/images/logo.png" alt="Sweet Divas Cookies" style="width: 120px; height: 93;">
+          <a class="navbar-brand visible-xs" href="#">
+            <%= image_tag 'logo.png', :id => 'smlogo'%>
           </a>
           <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class = "icon-bar"></span>
@@ -37,7 +37,7 @@
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#testimonials">Testomonials</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -50,7 +50,7 @@
     <section id="intro" class="intro">
       <div class="container">
         <div class="slogan">
-          <div class="slogan wow fadeIn" data-wow-delay="0.6s">Welcome to our Kitchen</div>
+          <div class="slogan wow rubberBand" data-wow-delay="1s">Welcome to our Kitchen</div>
         </div>
       </div>
     </section>
@@ -65,10 +65,10 @@
   <div class="row">
     <div id ="about" class="container">
       <div class="lead">
-        We have a crazy passion for baking and decorating sugar cookies! You bring us a theme, and our creativity will bring it to life in cookies!!! - Lori &amp Arlene
+        We have a crazy passion for baking and decorating sugar cookies! You bring us a theme, and our creativity will bring it to life in cookies!!! - Arlene &amp Lori
       </div>
-      <div class="wow rollIn" data-wow-delay="0.4s">
-        <img src="/images/Lori_Arlene.jpeg" class="avatar img-circle" alt="Lori &amp Arlene" width="170" height="170">
+      <div class="wow bounceInDown" data-wow-delay="0.6s">
+        <%= image_tag 'Lori_Arlene.jpeg', :class => 'avatar img-circle'%>
       </div>
     </div>
   </div>
@@ -83,35 +83,35 @@
     <div class="col-sm-2 gut">
       <a role="button" href="gallery/#corporate">
         <h3>Corporate</h3>
-        <img src="/images/Gallery/Avatars/corporate.jpg" class="avatar img-circle" alt="Corporate" width="170" height="170">
+        <%= image_tag 'Gallery/Avatars/corporate.jpg', :class => 'avatar img-circle'%>
       </a>
     </div>
     
     <div class="col-sm-2 gut">
       <a role="button" href="gallery/#themes">
         <h3>Events &amp Themes</h3>
-        <img src="/images/Gallery/Avatars/themes.jpg" class="avatar img-circle" alt="Events &amp Themes" width="170" height="170">
+        <%= image_tag 'Gallery/Avatars/themes.jpg', :class => 'avatar img-circle'%>
       </a>
     </div>
     
     <div class="col-sm-2 gut">
       <a role="button" href="gallery/#holidays">
         <h3>Holidays &amp Seasons</h3>
-        <img src="/images/Gallery/Avatars/holidays.jpg" class="avatar img-circle" alt="Holidays &amp Seasons" width="170" height="170">
+        <%= image_tag 'Gallery/Avatars/holidays.jpg', :class => 'avatar img-circle'%>
       </a>
     </div>
     
     <div class="col-sm-2 gut">
       <a role="button" href="gallery/#sports">
         <h3>Sports</h3>
-        <img src="/images/Gallery/Avatars/sports.jpg" class="avatar img-circle" alt="Sports" width="170" height="170">
+        <%= image_tag 'Gallery/Avatars/sports.jpg', :class => 'avatar img-circle'%>
       </a>
     </div>
     
     <div class="col-sm-2 gut">
       <a role="button" href="gallery/#dogtreats">
         <h3>Dog Treats</h3>
-        <img src="/images/Gallery/Avatars/dogtreats.jpg" class="avatar img-circle" alt="Dog Treats" width="170" height="170">
+        <%= image_tag 'Gallery/Avatars/dogtreats.jpg', :class => 'avatar img-circle'%>
       </a>
     </div>
   </div>
@@ -121,7 +121,7 @@
 <a name="testimonials"></a>
 
 <div class="container top-buffer">
-  <h1>Feedback from the Cookie Monster</h1>
+  <h1>Feedback from the Cookie Monsters</h1>
   
 </div>
 
@@ -202,7 +202,7 @@
 <!-- ============== CONTACT ============== -->
 <div class="container clearfix">
   <a name="contact"></a>
-  <h1 class="top-buffer">Contact</h1>
+  <h1 class="top-buffer">Contact Us</h1>
   <div>
     <div class="col-sm-11 lead wow shake" data-wow-delay="1.5s">
       SweetDivasCookies@gmail.com
