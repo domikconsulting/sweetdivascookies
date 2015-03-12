@@ -60,7 +60,7 @@ Rails.application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   Sweetdivascookies::Application.configure do
-    config.action_controller.asset_host = "http://sweetdivascookies.s3-website-us-east-1.amazonaws.com"
+    config.action_controller.asset_host = "http://d13vy87x2vb1os.cloudfront.net"
   end
 
   # Ignore bad email addresses and do not raise email delivery errors.
