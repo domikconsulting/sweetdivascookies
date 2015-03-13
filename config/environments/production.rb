@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.serve_static_assets = true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -34,8 +36,7 @@ Rails.application.configure do
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
-  config.assets.enabled = true
-
+  
   
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
@@ -61,8 +62,14 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "duf8u9b5leg3w.cloudfront.net"
   
+  config.action_controller.asset_host = ->(source, request = nil, *_){
+    if request && request.ssl?
+      "https://duf8u9b5leg3w.cloudfront.net"
+    else 
+      "http://duf8u9b5leg3w.cloudfront.net"
+    end
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
