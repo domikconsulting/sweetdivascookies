@@ -12,6 +12,31 @@
   </head>
 
   <body>
+    <script>
+      function detectmob() {
+        if(window.innerWidth <= 800) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      if(!detectmob()){
+        $(document).ready(function(){
+
+          var $windows = $('.page');
+
+          $windows.windows({
+            snapping: true,
+            scrollSpeed: 300,
+            scrollDelay: 700,
+            onScroll: function(s) {},
+            onSnapComplete: function($el) {},
+            onWindowEnter: function($el) {}
+          });
+
+        });
+      }
+    </script>
 
   <!-- ============== NAVBAR ============== -->
 
@@ -35,49 +60,64 @@
             <li><a href="#intro">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#testimonials">Testomonials</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#contacts">Contact Us</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
+
+
     <!-- ============== INTRO ============== -->
 
-    <a name="home"></a>
+    
 
-    <section id="intro" class="intro">
+    <div id="intro" class="page intro">
+      <a name="home"></a>
       <div class="container">
         <div class="slogan">
-          <div class="slogan wow rubberBand" data-wow-delay="1s">Welcome to our Kitchen</div>
+          <div class="slogan wow fadeIn" data-wow-delay="1s">Welcome to our Kitchen</div>
         </div>
       </div>
-    </section>
+    </div>
 
+    <!-- ============== SOCIAL ============== -->
 
- 
+    <div id="socialbar" class="hidden wow">
+      <div class="socico">
+        <a class="btn btn-lg btn-social-icon btn-facebook" href="https://www.facebook.com/pages/Sweet-Divas-Cookies/838768736156106" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </div>
+      <div class="socico">
+        <a class="btn btn-lg btn-social-icon btn-instagram" href="https://www.instagram.com/sweetdivascookies" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
 <!-- ============== ABOUT ============== -->
-<a name="about"></a>
 
-<div class="container top-buffer">
+<div id="1" class="page container" style="margin-top: 240px;">
+  <a name="about"></a>
   <h1>About</h1>
-  <div class="row">
-    <div id ="about" class="container">
-      <div class="lead">
-        We have a crazy passion for baking and decorating sugar cookies! You bring us a theme, and our creativity will bring it to life in cookies!!! - Arlene &amp Lori
-      </div>
-      <div class="wow bounceInDown" data-wow-delay="0.6s">
-        <%= image_tag 'Lori_Arlene.jpeg', :class => 'avatar img-circle'%>
-      </div>
+  <div id ="about" class="row">
+    <div class="lead">
+      We have a crazy passion for baking and decorating sugar cookies! You bring us a theme, and our creativity will bring it to life in cookies!!! - Arlene &amp Lori
+    </div>
+    <div class="wow bounceInDown" data-wow-delay="0.6s">
+      <%= image_tag 'Lori_Arlene.jpeg', :class => 'aboutimg img-circle'%>
     </div>
   </div>
 </div>
 
 <!-- ============== GALLERY ============== -->
-<a name="gallery"></a>
 
-<div class="container top-buffer">
+
+<div id="2" class="page container">
+  <a name="gallery"></a>
   <h1>Gallery</h1>
   <div id ="gallery" class="row">
     <div class="col-sm-2 gut">
@@ -118,16 +158,12 @@
 </div>
 
 <!-- ============== TESTIMONIALS ============== -->
-<a name="testimonials"></a>
 
-<div class="container top-buffer">
+
+<div id="3" class="page container">
+  <a name="testimonials"></a>
   <h1>Feedback from the Cookie Monsters</h1>
-  
-</div>
-
-<div class="container">
-  <div class='row'>
-    <div>
+    <div id="testimonials">
       <div class="carousel slide" data-ride="carousel" id="quote-carousel">
                 
         <!-- Carousel Slides / Quotes -->
@@ -135,7 +171,7 @@
         
           <!-- Quote 1 -->
           <div class="item active">
-            <div id ="testimonials" class="row">
+            <div lass="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>I ordered cookies for my husband's birthday and a work event. The designs are so creative and they taste even better!</p>
                 <p><small>Rochelle</small></p>
@@ -144,7 +180,7 @@
           </div>
           <!-- Quote 2 -->
           <div class="item">
-            <div id ="testimonials" class="row">
+            <div class="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>Shipped to California, all arrived in perfect shape. . .thank you Sweet Divas</p>
       
@@ -153,7 +189,7 @@
           </div>
           <!-- Quote 3 -->
           <div class="item">
-            <div id ="testimonials" class="row">
+            <div class="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>Works of art you can eat!</p>
                 
@@ -162,7 +198,7 @@
           </div>
           <!-- Quote 4 -->
           <div class="item">
-            <div id ="testimonials" class="row">
+            <div class="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>The best cookie for any occasion</p>
                 
@@ -171,7 +207,7 @@
           </div>
           <!-- Quote 5 -->
           <div class="item">
-            <div id ="testimonials" class="row">
+            <div class="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>Sweet Divas cookies are the best addition to any party, let them know your theme and they will create cookies that everyone will be talking about!</p>
                 
@@ -180,7 +216,7 @@
           </div>
           <!-- Quote 6 -->
           <div class="item">
-            <div id ="testimonials" class="row">
+            <div class="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>...and they taste yummy too!</p>
               </blockquote>
@@ -188,7 +224,7 @@
           </div>
           <!-- Quote 7 -->
           <div class="item">
-            <div id ="testimonials" class="row">
+            <div class="row">
               <blockquote class="col-sm-offset-1 col-sm-10">
                 <p>I met Lori when we worked with each other at a scrapbook store. Being friends with her on Facebook and seeing her posts of the cookies that her and her friend made were so 
                 professional and cute. I am so glad that they have now created a company for their delicious cookies.  I purchased cookies for a scrapbook weekend to share. They turned out 
@@ -204,18 +240,18 @@
         
         <!-- Carousel Buttons Next/Prev -->
         <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-      </div>                          
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>                          
     </div>
-  </div>
+  </div>  
 </div>
 
 <!-- ============== PRICING ============== -->
-<a name="pricing"></a>
 
-<div class="container top-buffer">
+
+<div id="4" class="page container">
+  <a name="pricing"></a>
   <h1>Pricing</h1>
-  <div id ="pricing" class="row">
+  <div id="pricing" class="row">
     <div class="col-sm-4 wow bounceInDown" data-wow-delay="0.2s">
       <div class="text-center">
         <h2>Pricing.</h2>
@@ -244,23 +280,17 @@
 </div>  
 
 <!-- ============== CONTACT ============== -->
-<div class="container clearfix">
-  <a name="contact"></a>
-  <h1 class="top-buffer">Contact Us</h1>
-  <div>
-    <div class="col-sm-11 lead wow shake" data-wow-delay="1.5s">
-      SweetDivasCookies@gmail.com
-    </div>
-    <div class="col-sm-1 wow shake" data-wow-delay="3s">
-      <a href="https://www.facebook.com/pages/Sweet-Divas-Cookies/838768736156106" class="btn btn-lg btn-social-icon btn-facebook" rel="nofollow"><span class="fa fa-facebook"></span></a>
-    </div>
-  </div>
+
+<div id="5" class="page container">
+  <a name="contacts"></a>
+  <h1>Contact Us</h1>
+
 </div>
 
 
 
 <!-- ============== FOOTER ============== -->
-  <footer class="top-buffer">
+  <footer>
     <div class="container">
       <p>&copy; Copyright 2015 - Sweet Divas Cookies. All rights reserved.</p>
     </div>

@@ -19,10 +19,10 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand hidden-xs" href="#">
-            <%= image_tag 'logo.png', :id => 'lglogo'%>
+            <%= image_tag 'logo.png', :id => 'lglogo', :nopin => 'nopin'%>
           </a>
           <a class="navbar-brand visible-xs" href="#">
-            <%= image_tag 'logo.png', :id => 'smlogo'%>
+            <%= image_tag 'logo.png', :id => 'smlogo', :nopin => 'nopin'%>
           </a>
           <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class = "icon-bar"></span>
@@ -37,7 +37,7 @@
             <li><a href="#holidays">Holidays &amp Seasons</a></li>
             <li><a href="#sports">Sports</a></li>
             <li><a href="#dogtreats">Dog Treats</a></li>
-            <li><a href="/#gallery">&lt Home</a></li>
+            <li><a href="/#index">&lt Home</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -50,19 +50,19 @@
 
 
     <div class="container top-buffer">
-      <div class="wow shake" data-wow-delay="1s"><h1>Corporate</h1></div>
+      <div><h1>Corporate</h1></div>
       <div id ="corporate">
         <div id="links">
           <% @corporate.each_with_index do |carimg, index| %>
             <% if index==0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Corporate/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Corporate/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Corporate/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Corporate/#{carimg}") %>
                 </a>
@@ -79,19 +79,19 @@
 
 
     <div class="container top-buffer">
-      <div class="wow shake" data-wow-delay="2s"><h1>Events &amp Themes</h1></div>
+      <div><h1>Events &amp Themes</h1></div>
       <div id ="themes">
         <div id="links">
           <% @themes.each_with_index do |carimg, index| %>
             <% if index==0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Events_and_Themes/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Events_and_Themes/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Events_and_Themes/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Events_and_Themes/#{carimg}") %>
                 </a>
@@ -108,19 +108,19 @@
 
 
     <div class="container top-buffer">
-      <div class="wow shake" data-wow-delay="1s"><h1>Holidays &amp Seasons</h1></div>
+      <div><h1>Holidays &amp Seasons</h1></div>
       <div id ="holidays">
         <div id="links">
           <% @holidays.each_with_index do |carimg, index| %>
             <% if index==0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Holidays_and_Seasons/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Holidays_and_Seasons/#{carimg}") %>
                 </a>
               </div> 
             <% end %>
             <% if index != 0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Holidays_and_Seasons/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Holidays_and_Seasons/#{carimg}") %>
                 </a>
@@ -136,19 +136,19 @@
 
 
     <div class="container top-buffer">
-      <div class="wow shake" data-wow-delay="1s"><h1>Sports</h1></div>
+      <div><h1>Sports</h1></div>
       <div id ="sports">
         <div id="links">
           <% @sports.each_with_index do |carimg, index| %>
             <% if index==0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Sports/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Sports/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
-              <div class="col-sm-3">  
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s"> 
                 <a href="<%= asset_path("Gallery/Sports/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Sports/#{carimg}") %>
                 </a>
@@ -164,19 +164,19 @@
 
 
     <div class="container top-buffer">
-      <div class="wow shake" data-wow-delay="1s"><h1>Dog Treats</h1></div>
+      <div><h1>Dog Treats</h1></div>
       <div id ="dogtreats">
         <div id="links">
           <% @dogtreats.each_with_index do |carimg, index| %>
             <% if index==0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Dog_Treats/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Dog_Treats/#{carimg}") %>
                 </a>
               </div>
             <% end %>
             <% if index != 0 %>
-              <div class="col-sm-3">
+              <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
                 <a href="<%= asset_path("Gallery/Dog_Treats/#{carimg}") %>" data-gallery class="thumbnail">
                   <%= image_tag("Gallery/Dog_Treats/#{carimg}") %>
                 </a>
@@ -232,5 +232,6 @@
 
   <!-- Please call pinit.js only once per page -->
   <script type="text/javascript" async defer  data-pin-color="red" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+  
   </body>
 </html>

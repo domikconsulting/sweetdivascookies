@@ -1,16 +1,25 @@
 Rails.application.routes.draw do
+
   get 'home/gallery'
 
   get 'gallery/#corporate' => 'gallery#corporate'
 
   get 'gallery' => 'home#gallery'
-  get 'home/index'
 
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
+
+  
+
+  # match '/send_mail', to: 'contact#send_mail', via: 'post'
+
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#index'
+  root to: 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

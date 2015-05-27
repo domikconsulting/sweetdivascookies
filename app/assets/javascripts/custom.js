@@ -5,9 +5,9 @@ $(function() {
             //calculate destination place
             var dest = 0;
             if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
-                dest = $(document).height() - $(window).height() - 250;
+                dest = $(document).height() - $('.window').height();
             } else {
-                dest = $(this.hash).offset().top - 250;
+                dest = $(this.hash).offset().top - $(window).outerHeight() / 2 + $('nav').outerHeight();
             }
             //go to destination
             $('html,body').animate({
@@ -33,3 +33,6 @@ $(document).ready(function() {
     interval: 60000,
   });
 });
+
+
+

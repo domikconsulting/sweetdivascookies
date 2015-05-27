@@ -227,3 +227,15 @@ body:last-child .blueimp-gallery-playing > .play-pause {
 *+html .blueimp-gallery > .slides > .slide > .slide-content {
   position: relative;
 }
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 1.4s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
