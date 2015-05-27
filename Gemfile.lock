@@ -343,7 +343,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   figaro (~> 0.7.0)
-  fog (~> 1.20)
+  fog-aws
   font-awesome-rails
   font_assets
   guard-bundler
