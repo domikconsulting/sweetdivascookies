@@ -34,6 +34,9 @@ gem 'thin'
 gem 'figaro', "~> 0.7.0"
 gem 'rails_12factor'
 
+gem 'sendgrid-rails', '~> 2.0'
+
+gem 'actionmailer'
 gem 'mail'
 # }
 # Forms, mail {

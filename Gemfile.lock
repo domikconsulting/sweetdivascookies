@@ -300,6 +300,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sendgrid-rails (2.0.4)
+      actionmailer (>= 3.0.0)
+      activesupport (>= 2.1.0)
     shellany (0.0.1)
     simple_form (3.1.0)
       actionpack (~> 4.0)
@@ -341,6 +344,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   asset_sync
   autoprefixer-rails
   better_errors
@@ -364,6 +368,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sendgrid-rails (~> 2.0)
   simple_form
   spring
   thin
