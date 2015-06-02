@@ -35,13 +35,13 @@ Rails.application.configure do
   # }
 
      config.action_mailer.smtp_settings = {
-    address: "smtp.sendgrid.net",
+    address: "smtp.gmail.net",
     port: "587",
-    domain: "heroku.com",
+    domain: "gmail.com",
     authenticaiton: "plain",
     enable_starttls_auto: true,
-    user_name: "app34671545@heroku.com",
-    password: "rfuxkhdu2820"
+    user_name: ENV['SDC_EMAIL_REQ'],
+    password: ENV['SDC_EMAIL_REQ_PW']
   }
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
