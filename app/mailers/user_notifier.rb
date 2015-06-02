@@ -1,6 +1,6 @@
 class UserNotifier < ApplicationMailer
-  default from: ENV['SDC_EMAIL_REQ']
-  default to: ENV['SDC_EMAIL']
+  default from: "noreply@sweetdivascookies.com"
+  default to: "orbitwhitex@gmail.com"
   default subject: 'Craving Those Cookies!'
 
   def req_email(name, email, content)
