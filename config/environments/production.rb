@@ -1,10 +1,13 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+
+
+  config.assets.enabled = true
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -76,13 +79,17 @@ Rails.application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   
-  config.action_controller.asset_host = ->(source, request = nil, *_){
-    if request && request.ssl?
-      "https://duf8u9b5leg3w.cloudfront.net"
-    else 
-      "http://duf8u9b5leg3w.cloudfront.net"
-    end
-  }
+  config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+
+  # config.action_controller.asset_host = "duf8u9b5leg3w.cloudfront.net"
+
+  # config.action_controller.asset_host = ->(source, request = nil, *_){
+  #   if request && request.ssl?
+  #     "https://duf8u9b5leg3w.cloudfront.net"
+  #   else 
+  #     "http://duf8u9b5leg3w.cloudfront.net"
+  #   end
+  # }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
