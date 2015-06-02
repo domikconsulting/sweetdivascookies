@@ -6,8 +6,7 @@ Rails.application.routes.draw do
 
   get 'gallery' => 'home#gallery'
 
-  get 'contact', to: 'messages#new', as: 'contact'
-  post 'contact', to: 'messages#create'
+  resources :messages
 
   
 
