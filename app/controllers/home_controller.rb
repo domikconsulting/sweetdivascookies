@@ -14,22 +14,17 @@ class HomeController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
+    @message = Message.new(:name, :email, :content)
     
     if @message.valid?
-      UserNotifier.req_email(:message).deliver
+      UserNotifier.req_email(:name, :email, :content).deliver
       redirect_to contact_path, notice: "Your messages has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."
-      render :index
+      render :new
     end
   end
 
-private
-
-  def message_params
-    params.require(:message).permit(:name, :email, :content)
-  end
 
 
 end

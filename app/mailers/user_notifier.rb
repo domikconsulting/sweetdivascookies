@@ -1,9 +1,8 @@
 class UserNotifier < ApplicationMailer
   default from: "noreply@sweetdivascookies.com"
 
-  def req_email(message)
+  def req_email(name, email, content)
     
-    @messagem = message
 
     mail( :to => ENV['SDC_EMAIL'],  :subject => 'Craving Those Cookies!')
     
