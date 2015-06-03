@@ -21,7 +21,7 @@ class HomeController < ApplicationController
       redirect_to contact_path, notice: "Your messages has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."
-      render :new
+      render :index
     end
   end
 
