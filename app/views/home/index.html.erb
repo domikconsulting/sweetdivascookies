@@ -284,14 +284,14 @@
 <div id="5" class="page container">
   <a name="contacts"></a>
   <h1>Contact Us</h1>
-  
-  <%= simple_form_for @message do |f| %>
-  <%= f.input :name, required: true %>
-  <%= f.input :email, as: :email,required: true %>
-  <%= f.input :content, as: :text, required: true %>
-  <%= f.button :submit, "Send" %>
-<% end %>
-
+  <div id="contacts" class="row">
+    <%= simple_form_for @message do |f| %>
+    <%= f.input :name, required: true %>
+    <%= f.input :email, as: :email,required: true %>
+    <%= f.input :message, as: :text, required: true %>
+    <%= f.button :submit, "Send" %>
+    <% end %>
+  </div>
 
 
 

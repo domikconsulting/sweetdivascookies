@@ -2,8 +2,8 @@ class Message < MailForm::Base
   
   attribute :name,      :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :content,   :validate => true
-  attribute :nickname,  :captcha  => true
+  attribute :message,   :validate => true
+
 
   def headers
     {
