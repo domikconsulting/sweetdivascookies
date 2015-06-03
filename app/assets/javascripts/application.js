@@ -16,10 +16,9 @@
 //= require jquery.scrollTo
 //= require wow
 //= require custom
-//= require blueimp-gallery.min
-//= require bootstrap-image-gallery.min
-//= require jquery.blueimp-gallery.min
 //= require jquery.windows
 //= require social
 //= require gallery
+
+
 
