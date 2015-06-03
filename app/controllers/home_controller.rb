@@ -14,17 +14,16 @@ class HomeController < ApplicationController
   end
 
   def create
-    @message = Message.new(:name, :email, :content)
-    
-    if @message.valid?
-      UserNotifier.req_email(:name, :email, :content).deliver
-      redirect_to contact_path, notice: "Your messages has been sent."
+    @message = Message.new(params[:message])
+    @message.request = request
+    if @message.deliver
+      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
+      
     else
-      flash[:alert] = "An error occurred while delivering this message."
-      render :new
+      flash[:error] = "Cannot send message."
+      render :index
     end
   end
-
 
 
 end

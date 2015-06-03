@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-  <h2>
-
-	<%= @name %> - <%= @email %> wrote:
-	</h2>
-	<p>
-	<%= @content %>
-	</p>
- </body>
-</html>
+<div>
+  <% flash.each do |key, value| %>
+    <div>
+      <a href="#" data-dismiss="alert">×</a>
+        <%= value %>
+    </div>
+  <% end %>
+</div>
