@@ -4,10 +4,10 @@ class UserNotifier < ApplicationMailer
   default subject: 'Craving Those Cookies!'
 
   def req_email(name, email, content)
-    @name = name
-	  @email = email
-    @content = content
-
+   #  @name = name
+	  # @email = email
+   #  @content = content
+    content_type  "text/html"
     mail( body: [@name, @email, @content]
     )
   end
