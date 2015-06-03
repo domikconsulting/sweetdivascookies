@@ -5,8 +5,8 @@ class UserNotifier < ApplicationMailer
     
     @name = name
     @email = email
-    @message = message
-    
+    @content = content
+
     mail( :to => ENV['SDC_EMAIL'],  :subject => 'Craving Those Cookies!')
     
   end
