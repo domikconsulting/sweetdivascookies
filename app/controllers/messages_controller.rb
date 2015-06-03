@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     
     if @message.valid?
-      UserNotifier.req_email(:name, :email, :content).deliver
+      UserNotifier.req_email(:message).deliver
       redirect_to contact_path, notice: "Your messages has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."
