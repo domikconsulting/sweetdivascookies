@@ -38,6 +38,14 @@ body h1 {
 
 
 
+#contacts {
+  z-index: 999;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
 .lead {
   font-family: 'Comfortaa', cursive;
 }
@@ -152,8 +160,9 @@ body h3 {
 
 
 
-#footer {
-  margin-bottom: 150px;
+.footer {
+    position: fixed;
+    bottom: 1px;
 }
 
 /* ===========================
@@ -481,7 +490,14 @@ blockquote small{
 #socialbar {
   top: 45%;
   left: 5px;
-  z-index: 9999;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+}
+#socialbar2 {
+  top: 45%;
+  left: 5px;
+  z-index: 99;
   position: fixed;
   width: 100%;
 }
@@ -523,3 +539,41 @@ border-color: #d6e9c6;
 color: #468847;
 text-align: left;
 }
+
+
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+    
+}
+ 
+.btn-primary {
+    background: #ec108d;
+    color: #ffffff;
+    outline: 0 none;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #f1329f;
+    outline: 0 none;
+    
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #b50c6c;
+    box-shadow: none;
+    outline: 0 none;
+    
+}
+
+label {
+
+  font-family: 'Comfortaa', cursive;
+  font-size: 24px;
+  text-align: left;
+}
+

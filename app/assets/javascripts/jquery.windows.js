@@ -150,14 +150,14 @@
           case 33:  // page up
             scrollInfo = _prevScroll();
             break;
-          case 32:  // space bar
-            if (e.altKey === true || e.controlKey === true) return;
-            if (e.shiftKey === true) {
-              scrollInfo = _prevScroll();
-            } else {
-              scrollInfo = _nextScroll();
-            }
-            break;
+          // case 32:  // space bar
+          //   if (e.altKey === true || e.controlKey === true) return;
+          //   if (e.shiftKey === true) {
+          //     scrollInfo = _prevScroll();
+          //   } else {
+          //     scrollInfo = _nextScroll();
+          //   }
+          //   break;
         }
         
         if (scrollInfo !== null) {

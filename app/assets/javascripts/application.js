@@ -19,6 +19,7 @@
 //= require jquery.windows
 //= require social
 //= require gallery
-
-
+//= require blueimp-gallery.min
+//= bootstrap-image-gallery.min
+//= jquery.blueimp-gallery.min
 

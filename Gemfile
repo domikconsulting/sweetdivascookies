@@ -42,6 +42,7 @@ gem 'mail'
 # Forms, mail {
 gem 'mail_form'
 gem 'simple_form'
+gem 'bootstrap_form'
 # }
 # Development (Optional) {
 gem 'better_errors', group: :development
