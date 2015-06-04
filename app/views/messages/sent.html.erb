@@ -12,7 +12,11 @@
   </head>
 
   <body>
+  	
     <script>
+	
+
+
       function detectmob() {
         if(window.innerWidth <= 800) {
           return true;
@@ -37,6 +41,8 @@
         });
       }
     </script>
+
+    
 
   <!-- ============== NAVBAR ============== -->
 
@@ -282,18 +288,13 @@
 <!-- ============== CONTACT ============== -->
 
 <div id="5" class="page container">
-  <a name="contacts"></a>
-  <h1>Contact Us</h1>
-  
-  <div id="contacts" class="text-center">
-  <%= bootstrap_form_for(@message) do |f| %>
-  <%= f.text_field :name %>
-  <%= f.email_field :email %>
-  <%= f.text_area :message, rows: "5" %> <br>
-  <%= f.submit "Send", class: "btn btn-lg btn-primary" %>
-  <% end %>
-  </div>
-
+  <a id="contacts" name="contacts"></a>
+	<div>
+  		<h1>Contact Us</h1>
+  		<div id="success" class="alert alert-success wow fadeIn" data-wow-delay="0.4s" role="alert">
+    		<div class="lead">Message sent!</div>
+  		</div>
+  	</div>
 
 
 

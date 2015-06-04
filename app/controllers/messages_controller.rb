@@ -8,13 +8,16 @@ class MessagesController < ApplicationController
     @message = Message.new(params[:message])
     @message.request = request
     if @message.deliver
-      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
-      redirect_to request.referrer
-      
+      # render :action => :success  
+      # render "partial_wrapper", :locals => {:partial => "create"}, :layout => true
+      redirect_to action: 'sent'
     else
       flash[:error] = "Cannot send message."
-      redirect_to request.referrer
+      # redirect_to action: 'show', id: 'success'
+      redirect_to :sent
+
     end
+
   end
 
 

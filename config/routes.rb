@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   resources :messages
 
+  get 'sent' => 'home#sent'
+
+  
   
 
   # match '/send_mail', to: 'contact#send_mail', via: 'post'

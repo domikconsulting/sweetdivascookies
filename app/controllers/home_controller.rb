@@ -27,5 +27,8 @@ class HomeController < ApplicationController
     end
   end
 
+  def sent
+    
+  end
 
 end
