@@ -9,10 +9,11 @@ class MessagesController < ApplicationController
     @message.request = request
     if @message.deliver
       flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
+      redirect_to request.referrer
       
     else
       flash[:error] = "Cannot send message."
-      render :index
+      redirect_to request.referrer
     end
   end
 
