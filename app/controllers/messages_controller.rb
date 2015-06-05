@@ -7,14 +7,19 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(params[:message])
     @message.request = request
+    @failed = 0
+
     if @message.deliver
       # render :action => :success  
       # render "partial_wrapper", :locals => {:partial => "create"}, :layout => true
       redirect_to :sent
     else
-      flash[:error] = "Cannot send message."
+      
       # redirect_to action: 'show', id: 'success'
-      redirect_to :sent
+      
+      redirect_to :back
+      @failed = 1
+      @anchor = "contacts"
 
     end
 

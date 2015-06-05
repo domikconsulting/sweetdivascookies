@@ -12,6 +12,14 @@
   </head>
 
   <body>
+
+  <% if @anchor %>
+    <script type="text/javascript">
+      window.location.hash = "<%= @anchor %>";
+    </script>
+  <% end %>
+
+
     <script>
       function detectmob() {
         if(window.innerWidth <= 800) {
@@ -284,13 +292,16 @@
 <div id="5" class="page container">
   <a name="contacts"></a>
   <h1>Contact Us</h1>
+  <% if @failed == 1 %>
+    <%= render partial: "failed" %>
+  <% end %>
   
   <div id="contacts" class="text-center">
   <%= bootstrap_form_for(@message) do |f| %>
   <%= f.text_field :name %>
   <%= f.email_field :email %>
   <%= f.text_area :message, rows: "5" %> <br>
-  <%= f.submit "Send", class: "btn btn-lg btn-primary" %>
+  <%= f.submit "Send", class: "btn btn-lg btn-primary", :remote => true %>
   <% end %>
   </div>
 

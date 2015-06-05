@@ -28,7 +28,11 @@ class HomeController < ApplicationController
   end
 
   def sent
-    
+
+    @anchor = "contacts"
+    render :action => "sent"
+
   end
+
 
 end

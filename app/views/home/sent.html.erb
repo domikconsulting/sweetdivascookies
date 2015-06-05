@@ -12,6 +12,13 @@
   </head>
 
   <body>
+
+  <% if @anchor %>
+    <script type="text/javascript">
+      window.location.hash = "<%= @anchor %>";
+    </script>
+  <% end %>
+
     <script>
       function detectmob() {
         if(window.innerWidth <= 800) {
