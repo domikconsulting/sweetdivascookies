@@ -8,10 +8,8 @@ Rails.application.routes.draw do
 
   resources :messages
 
-  get 'sent' => 'home#sent'
-
-  
-  
+  # get 'sent' => 'home#sent'
+  match 'sent', to: redirect('#contacts'), via: :all
 
   # match '/send_mail', to: 'contact#send_mail', via: 'post'
 
