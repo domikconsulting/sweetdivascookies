@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
     if @message.deliver
       # render :action => :success  
       # render "partial_wrapper", :locals => {:partial => "create"}, :layout => true
-      redirect_to action: 'sent'
+      redirect_to :sent
     else
       flash[:error] = "Cannot send message."
       # redirect_to action: 'show', id: 'success'
