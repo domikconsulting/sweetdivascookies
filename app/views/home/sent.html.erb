@@ -20,14 +20,7 @@
   <% end %>
 
     <script>
-      function detectmob() {
-        if(window.innerWidth <= 800) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-      if(!detectmob()){
+      if ($(window).width() <= 479){
         $(document).ready(function(){
 
           var $windows = $('.page');
@@ -44,8 +37,6 @@
         });
       }
 
-      
-     $.scrollTo( "#contacts" );
 
     </script>
 
@@ -292,17 +283,16 @@
 
 <!-- ============== CONTACT ============== -->
 
-<div id="5" class="page container">
-  <a name="contacts"></a>
-  <h1>Contact Us</h1>
-  <div id="success" class="alert alert-success wow fadeIn" data-wow-delay="0.4s" role="alert">
-    <div class="lead">Message sent!</div>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <a id="contacts" name="contacts"></a>
+      <div id="5" class="page">
+        <div id="success" class="alert alert-success wow fadeIn" data-wow-delay="0.4s" role="alert">
+          <div class="lead">Message sent!</div>
+        </div>
+      </div>
   </div>
-
-
-
-
-</div>
 
 
 
